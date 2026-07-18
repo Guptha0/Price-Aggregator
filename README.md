@@ -1,6 +1,3 @@
-
-
-```markdown
 # 🛡️ Price Aggregator
 
 ### *Autonomous Cross-Platform Commerce Data Pipelines & Real-Time Price Optimization Engine*
@@ -79,7 +76,6 @@ Data is validated by a defensive **Levenshtein-based Spec-Override Engine** that
 │ • Historical Trends & Volatility           │
 │ • Engine Diagnostics                       │
 └────────────────────────────────────────────┘
-
 ```
 
 ---
@@ -87,7 +83,7 @@ Data is validated by a defensive **Levenshtein-based Spec-Override Engine** that
 # 📊 Dashboard Modules
 
 | Module | Purpose | Key Features |
-| --- | --- | --- |
+|--------|---------|--------------|
 | 🛒 **Aggregator Matrix** | Compare multiple stores simultaneously. | URL ingestion, automated metric cards, and green-highlighted best deals. |
 | 📉 **Historical Trends** | View long-term pricing and volatility. | Multi-line trajectory overlays and floor-to-ceiling percentage drop calculators. |
 | 🖥 **Engine Diagnostics** | Monitor scraping health and latency. | Real-time status check grids, HTTP response monitoring, and layout warnings. |
@@ -133,7 +129,6 @@ Price-Aggregator/
 ├── run_daily_tracker.ps1       # Windows PowerShell background wrapper script
 ├── requirements.txt            # Project dependency packages
 └── README.md                   # System documentation
-
 ```
 
 ---
@@ -163,28 +158,36 @@ Evaluate Threshold Alerts
       │
       ▼
 Scheduled Daily Execution (09:00 AM)
-
 ```
 
 ---
 
 # 🎯 Key Engineering Highlights
 
-### 🔍 Extraction Engine
+<table>
+<tr>
+<td width="50%">
 
+### 🔍 Extraction Engine
 * **JSON-LD Microdata Parser**
 * **OpenGraph Protocol Mapping**
 * **Regex Currency Fallback**
 * **SPA Hydration Delays**
 * **Network Asset Blocking**
 
-### ⚙️ Algorithmic Processing
+</td>
+<td width="50%">
 
+### ⚙️ Algorithmic Processing
 * **Async Context Isolation**
 * **Levenshtein String Distance**
 * **Capacity & Tier Veto Traps**
 * **Time-Series Volatility Math**
 * **Multi-Channel Alerting**
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -193,44 +196,35 @@ Scheduled Daily Execution (09:00 AM)
 > **Note:** Ensure you have **Python 3.10+** installed on your system before proceeding.
 
 ### 1. Clone the Repository
-
 ```bash
 git clone [https://github.com/Guptha0/Price-Aggregator.git](https://github.com/Guptha0/Price-Aggregator.git)
 cd Price-Aggregator
-
 ```
 
 ### 2. Instantiate Environment & Install Dependencies
 
 **For Windows Deployment:**
-
 ```powershell
 python -m venv venv
 .\venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 playwright install chromium
-
 ```
 
 **For Linux / macOS Deployment:**
-
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 playwright install chromium
-
 ```
 
 ### 3. Launch the Streamlit Interactive Workspace
-
 ```bash
 streamlit run dashboard/app.py
-
 ```
 
 ### 4. Deploy the Autonomous Daily Background Task Runner (9:00 AM)
-
 Run the dynamic installation script to register the headless cron runner into your operating system's kernel registry:
 
 ```bash
@@ -239,7 +233,6 @@ python setup_scheduler.py --install
 
 # To completely strip the background task from the operating system
 python setup_scheduler.py --remove
-
 ```
 
 ---
@@ -258,7 +251,3 @@ python setup_scheduler.py --remove
 # ⭐ Support the Project
 
 If you found this architecture or data extraction pipeline useful, please consider giving the repository a ⭐ on GitHub to support future development!
-
-```
-
-```
