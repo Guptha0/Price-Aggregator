@@ -1,106 +1,217 @@
-# 🛡️ Price Aggregator
+---
 
-### *Autonomous Cross-Platform Commerce Data Pipelines & Real-Time Price Optimization Engine*
+# ✨ Project Highlights
+
+<div align="center">
+
+| 🚀 Performance | 🛡️ Reliability | ⚡ Automation | 📊 Analytics |
+|:-------------:|:--------------:|:------------:|:-----------:|
+| Async Playwright | Semantic Extraction | Daily Scheduler | Historical Trends |
+| JSON-LD Parsing | Spec Validation | Cross Platform | Price Intelligence |
+
+</div>
 
 ---
 
-## 💼 The Interview Pitch
+# ⚙️ Feature Overview
 
-The **Price Aggregator** is a production-grade, highly resilient data harvesting and price intelligence platform engineered to track, map, and analyze competitive retail dynamics across 100+ global digital commerce nodes simultaneously. 
-
-Unlike fragile traditional web scrapers that rely on hardcoded, volatile CSS selectors, this system implements a **Tiered Semantic Extraction Engine** that bypasses DOM mutations by natively targeting structured schema layer definitions (JSON-LD Microdata and OpenGraph protocols). To overcome the asynchronous rendering challenges of modern Single Page Applications (SPAs), the extraction pipeline utilizes an asynchronous **Playwright Stealth Architecture** running isolated, resource-blocked browser contexts that complete deep DOM scans within a strict 12-second execution window. 
-
-Data is validated by a defensive **Levenshtein-based Spec-Override Engine** that completely prevents cross-product data pollution by enforcing high-confidence identifier vetoes. The system functions autonomously as a "set-and-forget" local appliance via a dynamic, cross-platform background task runner utility that silently aggregates metrics daily, updates a high-performance transactional SQLite ledger, and pushes real-time event alerts directly across localized and remote notification channels.
+| Feature | Description |
+|----------|-------------|
+| 🌍 Multi-Platform Tracking | Monitor 100+ e-commerce websites from a single dashboard. |
+| 🧠 Semantic Extraction Engine | Extracts data using JSON-LD, Microdata & OpenGraph instead of fragile CSS selectors. |
+| ⚡ Async Playwright Engine | High-speed asynchronous scraping with stealth browser contexts. |
+| 🔍 Spec-Override Validation | Prevents mismatched products using Levenshtein similarity + specification validation. |
+| 📈 Historical Analytics | Interactive charts with price history, volatility, and trend analysis. |
+| 🔔 Smart Alerts | Windows desktop notifications & Discord webhook support. |
+| 💾 SQLite Ledger | Persistent WAL-mode database optimized for historical tracking. |
+| 🤖 Autonomous Scheduler | Runs automatically every day without user interaction. |
 
 ---
 
-## 🛠️ Technical Architecture & Stack
+# 🧩 System Architecture
 
-### System Workflow Diagram
 ```text
- ┌────────────────┐      ┌─────────────────┐      ┌──────────────────┐
- │ Target Commerce│ ───> │  Playwright     │ ───> │  3-Tier Semantic │
- │ URL Ingestion  │      │  Stealth Engine │      │  Extractor Pool  │
- └────────────────┘      └─────────────────┘      └──────────────────┘
-                                                            │
-                                                            ▼
- ┌────────────────┐      ┌─────────────────┐      ┌──────────────────┐
- │ Streamlit Tabs │ <─── │ Transactional   │ <─── │ Spec-Override    │
- │ UI Dashboard   │      │ SQLite Ledger   │      │ Matcher (Veto)   │
- └────────────────┘      └─────────────────┘      └──────────────────┘
-         │                                                  │
-         ▼                                                  ▼
- ┌────────────────┐                               ┌──────────────────┐
- │ Live UI Alerts │                               │ Native Windows / │
- │ & Visual Matrix│                               │ Discord Alerts   │
- └────────────────┘                               └──────────────────┘
-Core Technologies
-Automation Engine: Playwright + Playwright-Stealth (Async API running headless sandboxed browser context isolation).
-
-Fuzzy Algorithmic Logic: thefuzz (Levenshtein Distance text similarity paired with deterministic specifications validation).
-
-Data Pipeline: pandas (Dynamic matrix formatting, variance computation, and multi-line time-series structuring).
-
-Storage Architecture: SQLite (Transactional ledger running Write-Ahead Logging [WAL] mode with optimized indexing).
-
-Frontend UI: Streamlit (High-performance multi-tab data visualization workspace).
-
-✨ Core Features
-100+ Pre-Populated Platform Registry: A hardcoded autocomplete platform tracking pool encompassing major fashion, technology, grocery, and marketplace sectors globally (Amazon, Flipkart, Meesho, Croma, Walmart, Myntra, Nykaa, eBay, and more).
-
-3-Tab Advanced Analytics Interface:
-
-Tab 1: Aggregator Matrix: Seamless multi-source product URL ingestion, automated live metric summaries, and a side-by-side transaction matrix that dynamically highlights the best market deal in real-time.
-
-Tab 2: Historical Trend Intelligence: Interactive overlays tracking long-term price trajectories alongside an automated Price Volatility Calculator mapping floor-to-ceiling percentage drops.
-
-Tab 3: Engine Diagnostics: Real-time hardware and network scrape status check grids indicating active health signals, response latency, and layout warnings.
-
-Spec-Override Veto Logic: Defensive identifier grouping routines that prevent mismatched product variants (e.g., separating 1TB vs 2TB components or PRO vs EVO hardware models) while lowering text thresholds dynamically to accommodate padded brand aliases.
-
-Unified OS Scheduling Utility: A native platform-agnostic configuration installer (setup_scheduler.py) that instantly registers the pipeline into system cron daemons or the Windows Task Scheduler registry via one-line terminal initializations.
-
-📦 Installation & Setup
-Ensure you have Python 3.10+ installed on your system before proceeding.
-
-1. Clone the Repository
-Bash
-git clone [https://github.com/Guptha0/universal-price-aggregator.git](https://github.com/Guptha0/universal-price-aggregator.git)
-cd universal-price-aggregator
-2. Instantiate Environment & Install Dependencies
-PowerShell
-# Windows Deployment
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-playwright install chromium
-
-# Linux / macOS Deployment
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-playwright install chromium
-3. Launch the Streamlit Interactive Workspace
-Bash
-streamlit run dashboard/app.py
-4. Deploy the Autonomous Daily Background Task Runner (9:00 AM)
-Run the dynamic installation script to register the headless cron runner into your operating system's kernel registry:
-
-Bash
-# To install the background cron task automatically
-python setup_scheduler.py --install
-
-# To completely strip the background task from the operating system
-python setup_scheduler.py --remove
+                        ┌──────────────────────┐
+                        │ Product URLs Input   │
+                        └──────────┬───────────┘
+                                   │
+                                   ▼
+                  ┌────────────────────────────────┐
+                  │ Async Playwright Stealth Engine │
+                  └──────────┬─────────────────────┘
+                             │
+                             ▼
+               ┌──────────────────────────────────┐
+               │ Tiered Semantic Extraction Engine │
+               │ JSON-LD • Microdata • OpenGraph │
+               └──────────┬───────────────────────┘
+                          │
+                          ▼
+          ┌────────────────────────────────────────┐
+          │ Spec-Override Validation Engine        │
+          │ Levenshtein + Product Identifier Check │
+          └──────────┬─────────────────────────────┘
+                     │
+         ┌───────────┴────────────┐
+         ▼                        ▼
+┌──────────────────┐     ┌──────────────────┐
+│ SQLite Database  │     │ Notification Hub │
+│ Historical Data  │     │ Discord/Desktop  │
+└─────────┬────────┘     └──────────────────┘
+          │
+          ▼
+┌────────────────────────────────────────────┐
+│ Streamlit Analytics Dashboard              │
+│ • Aggregator Matrix                        │
+│ • Historical Trends                        │
+│ • Engine Diagnostics                       │
+└────────────────────────────────────────────┘
+```
 
 ---
 
-### How to Update This on GitHub Right Now
-You can update your README directly from your terminal in three quick steps:
-1. Open your project file `README.md` locally in your code editor and paste the text above into it.
-2. Save the file.
-3. In your PowerShell window, run:
-   ```powershell
-   git add README.md
-   git commit -m "docs: rebrand to Price Aggregator and polish documentation"
-   git push
+# 📊 Dashboard Modules
+
+| Module | Purpose |
+|--------|---------|
+| 🛒 Aggregator Matrix | Compare multiple stores simultaneously. |
+| 📉 Historical Trends | View long-term pricing and volatility. |
+| 🖥 Engine Diagnostics | Monitor scraping health, latency, and warnings. |
+
+---
+
+# 🛡️ Reliability Features
+
+- ✅ CSS-selector independent extraction
+- ✅ SPA compatible architecture
+- ✅ Headless stealth browser execution
+- ✅ Automatic retry mechanism
+- ✅ Product mismatch prevention
+- ✅ Cross-platform scheduler
+- ✅ WAL-mode transactional database
+- ✅ Real-time notification system
+
+---
+
+# 📂 Project Structure
+
+```text
+Price-Aggregator/
+│
+├── dashboard/
+│   ├── app.py
+│   ├── pages/
+│   └── assets/
+│
+├── scraper/
+│   ├── engine.py
+│   ├── semantic_parser.py
+│   ├── matcher.py
+│   └── playwright_runner.py
+│
+├── database/
+│   └── prices.db
+│
+├── scheduler/
+│   └── setup_scheduler.py
+│
+├── notifications/
+│   ├── discord.py
+│   └── desktop.py
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
+# 📈 Pipeline Lifecycle
+
+```text
+Product URL
+     │
+     ▼
+Launch Browser
+     │
+     ▼
+Semantic Extraction
+     │
+     ▼
+Specification Validation
+     │
+     ▼
+Store in SQLite
+     │
+     ▼
+Update Dashboard
+     │
+     ▼
+Price Alerts
+     │
+     ▼
+Scheduled Daily Execution
+```
+
+---
+
+# 🎯 Key Engineering Highlights
+
+<table>
+<tr>
+<td width="50%">
+
+### 🔍 Extraction
+
+- JSON-LD Parser
+- Microdata Support
+- OpenGraph Support
+- DOM Fallback
+- SPA Compatible
+
+</td>
+
+<td width="50%">
+
+### ⚙️ Processing
+
+- Async Workers
+- Fuzzy Matching
+- Spec Validation
+- Historical Tracking
+- Alert Generation
+
+</td>
+</tr>
+</table>
+
+---
+
+# 🚀 Future Roadmap
+
+- [ ] AI-powered price forecasting
+- [ ] REST API
+- [ ] Docker deployment
+- [ ] PostgreSQL backend
+- [ ] Redis caching
+- [ ] Mobile dashboard
+- [ ] Multi-user authentication
+- [ ] Cloud deployment
+
+---
+
+# ⭐ If you found this project useful
+
+Give the repository a ⭐ to support future development!
+
+```
+
+### This will make your README look much more professional because it adds:
+- ✅ Clean tables
+- ✅ Architecture diagrams
+- ✅ Project structure tree
+- ✅ Engineering highlights
+- ✅ Roadmap checklist
+- ✅ Better spacing
+- ✅ Professional GitHub formatting
+
+It will look similar to high-quality open-source projects from companies like Microsoft, Google, or Apache while remaining easy to read.
