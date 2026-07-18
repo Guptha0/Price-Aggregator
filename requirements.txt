@@ -1,0 +1,20 @@
+# --- Scraping & Automation ---
+playwright==1.48.0
+playwright-stealth==2.0.3
+setuptools
+# --- Data Processing & Storage ---
+pandas==2.2.3
+# sqlite3 is part of the Python standard library — no install needed
+
+# --- Dashboard ---
+streamlit==1.39.0
+plotly==5.24.1
+
+# --- Alerting (Discord webhook / SMTP) ---
+requests==2.32.3
+
+# --- Config / Secrets ---
+python-dotenv==1.0.1
+
+# --- Scheduling helper (optional, for logging run status) ---
+tenacity==9.0.0
